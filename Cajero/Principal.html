@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Usuario</title>
+    <style>
+        body {
+            background-color: rgb(30,144,255);
+        }
+        h1{
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        h1 {
+  text-align: center;
+}
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        h2 {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        h3 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a tu cuenta Josue</h1>
+    <h2>Cuenta 1</h2>
+    <label for="">Saldo de cuenta 1:</label>
+    <input type="text" name="Quetzales" id="Q" value="10000">
+    <action="">
+         <h3>Transacciones de cuenta 1</h3>
+         <input type="text" name="" id="c1" placeholder="Monto 1">
+         <input type="button" value="Deposito a cuenta 1" id="d1" onclick="formula()">
+         <input type="button" value="Retrio en cuenta 1" id="r1" onclick="formula2()">
+    </form>
+    <script>
+        function formula(){
+            var Cantidad1=parseInt(document.getElementById('c1').value);
+            var CantidadQ=parseInt(document.getElementById('Q').value); 
+            document.getElementById('Q').value=(CantidadQ+Cantidad1)
+        }
+        function formula2(){
+            var Cantidad1=parseInt(document.getElementById('c1').value);
+            var CantidadQ=parseInt(document.getElementById('Q').value); 
+            document.getElementById('Q').value=(CantidadQ-Cantidad1);
+        }
+    </script>
+   <hr>
+    <h2>Cuenta 2</h2>
+    <label for="">Saldo de cuenta 2:</label>
+    <input type="text" name="Dolares" id="D" value="1500">
+    <form action="">
+        <h3>Transacciones de cuenta 2</h3>
+        <input type="text" name="" id="c2" placeholder="Monto 2">
+        <input type="button" value="Deposito a cuenta 2" id="d2" onclick="formula3()">
+        <input type="button" value="Retiro en cuenta 2" id="r2" onclick="formula4()">
+        <script>
+         function formula3(){
+            var Cantidad2=parseInt(document.getElementById('c2').value);
+            var CantidadD=parseInt(document.getElementById('D').value); 
+            document.getElementById('D').value=(CantidadD+Cantidad2);
+         }   
+        function formula4(){
+            var Cantidad2=parseInt(document.getElementById('c2').value);
+            var CantidadD=parseInt(document.getElementById('D').value); 
+            document.getElementById('D').value=(CantidadD-Cantidad2); 
+        }
+        </script>
+    </form>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Josue</title>
+    <style>
+        body {
+            background-image: url("fondo\ 2.jpg");
+        }
+        h1{
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        h1 {
+  text-align: center;
+}
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        img{
+display:block;
+margin:auto;
+}
+    </style>
+</head>
+<body>  
+    <form action="action">
+        <h1>Bienvenido</h1>
+        <label for="">Tarjeta</label>
+        <input type="text" name="T" id="">
+        <label for="">Pin</label>
+        <input type="password" name="P" id="">
+        <input type="button" value="Ingresar" onclick="login(this.form)">
+        <p> </p>
+        <hr>
+        <img src="cajero mini.webp" alt="" width="250" height="250">
+    </form>
+    <script>
+        function login(form){
+            if (form.T.value=="0909-22-7242") {
+                if (form.P.value=="2022") {
+                    location="Principal.html";
+                } else {
+                    alert("Pin incorrecto");
+                }
+            } else {
+                alert("Numero de tarjeta invalida");
+            }
+        }
+
+    </script>
+</body>
+</html>
